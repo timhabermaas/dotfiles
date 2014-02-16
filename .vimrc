@@ -1,3 +1,5 @@
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
 set relativenumber
 
 set guifont=Monaco:h20
@@ -28,6 +30,8 @@ map <Leader>r :wa\|!rspec % --no-color<cr>
 " Leave insert mode by pressing jk; this might be stupid idea
 inoremap jk <esc>
 
+nnoremap <leader>. :CtrlPTag<cr>
+
 " Remove surrounding parentheses
 map <leader>p %x``x
 
@@ -44,4 +48,6 @@ endfunction
 " Tab completion during insert mode
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 " inoremap <s-tab> <c-n>
+
+map <leader>t :CtrlP<cr>
 
