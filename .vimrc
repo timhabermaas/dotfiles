@@ -1,6 +1,7 @@
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 set relativenumber
+set number
 
 set guifont=Monaco:h20
 
