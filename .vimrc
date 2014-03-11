@@ -1,5 +1,7 @@
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
+colorscheme Tomorrow-Night-Eighties
+
 set relativenumber
 set number
 
@@ -32,6 +34,8 @@ map <Leader>r :wa\|!rspec % --no-color<cr>
 " Leave insert mode by pressing jk; this might be stupid idea
 inoremap jk <esc>
 
+" Ignore some files for CtrlP's index.
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 nnoremap <leader>. :CtrlPTag<cr>
 
 " Remove surrounding parentheses
