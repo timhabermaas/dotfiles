@@ -56,4 +56,3 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 " inoremap <s-tab> <c-n>
 
 map <leader>t :CtrlP<cr>
-
