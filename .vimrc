@@ -29,7 +29,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 map <cr> o<esc>
 
 " Save all open buffers and run rspec on the current file
-map <Leader>r :wa\|!rspec % --no-color<cr>
+map <Leader>r :wa\|!bundle exec rspec % --no-color<cr>
 
 " Leave insert mode by pressing jk; this might be stupid idea
 inoremap jk <esc>
