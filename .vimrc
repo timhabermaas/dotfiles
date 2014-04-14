@@ -1,4 +1,15 @@
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+set nocompatible
+filetype off
+
+runtime macros/matchit.vim
+
+" use vundle package manager
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+Plugin 'kien/ctrlp.vim'
+
+filetype plugin indent on
 
 colorscheme Tomorrow-Night-Eighties
 
