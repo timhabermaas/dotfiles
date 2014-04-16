@@ -52,6 +52,9 @@ nnoremap <leader>. :CtrlPTag<cr>
 " Remove surrounding parentheses
 map <leader>p %x``xi<space><esc>
 
+" Swap argument under cursor with next argument
+map <leader>a viwdwvepbbp
+
 " this is borrowed from Gary Bernhardt (https://github.com/garybernhardt/dotfiles/blob/f0c0ff92209e5aed4fa3ef6faf056eb9944a8f12/.vimrc)
 function! InsertTabWrapper()
     let col = col('.') - 1
