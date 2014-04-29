@@ -8,6 +8,7 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 Plugin 'kien/ctrlp.vim'
+Plugin 'airblade/vim-gitgutter'
 
 filetype plugin indent on
 
