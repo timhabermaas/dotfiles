@@ -46,6 +46,8 @@ map <Leader>r :wa\|!bundle exec rspec % --no-color<cr>
 " Leave insert mode by pressing jk; this might be stupid idea
 inoremap jk <esc>
 
+" Show dotfiles by default.
+let g:ctrlp_show_hidden = 1
 " Ignore some files for CtrlP's index.
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 nnoremap <leader>. :CtrlPTag<cr>
