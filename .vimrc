@@ -17,6 +17,9 @@ colorscheme Tomorrow-Night-Eighties
 set relativenumber
 set number
 
+" associate *.purs with haskell filetype
+au BufRead,BufNewFile *.purs setfiletype haskell
+
 set guifont=Monaco:h20
 
 let mapleader=","
