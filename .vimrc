@@ -6,8 +6,8 @@ runtime macros/matchit.vim
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " use vundle package manager
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 Plugin 'kien/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
