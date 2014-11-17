@@ -11,6 +11,7 @@ call vundle#begin()
 
 Plugin 'kien/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'wting/rust.vim'
 
 filetype plugin indent on
 
@@ -41,6 +42,8 @@ filetype indent on
 
 " Remove trailing whitespaces on save
 autocmd BufWritePre * :%s/\s\+$//e
+
+autocmd FileType rust setlocal shiftwidth=4 softtabstop=2
 
 " Map enter to insert row without entering insert mode
 map <cr> o<esc>
