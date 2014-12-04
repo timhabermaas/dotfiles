@@ -66,6 +66,9 @@ map <leader>p %x``xi<space><esc>
 " Swap argument under cursor with next argument
 map <leader>a viwdwvepbbp
 
+" Inline variable
+map <leader>v *NNwwy$nviwpNdd:nohl<cr>
+
 " Replace double quotes with single quotes within the current selection
 map <leader>' :s/"/'/g<cr>
 
