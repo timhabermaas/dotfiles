@@ -7,11 +7,12 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " use vundle package manager
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call vundle#rc()
 
 Plugin 'kien/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'wting/rust.vim'
+Plugin 'kchmck/vim-coffee-script'
 
 filetype plugin indent on
 
