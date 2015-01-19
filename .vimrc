@@ -26,6 +26,11 @@ au BufRead,BufNewFile *.purs setfiletype haskell
 
 set guifont=Monaco:h20
 
+" use old regex engine to fix performance issues with Ruby syntax
+" highlighting
+" see http://stackoverflow.com/a/16920294
+set re=1
+
 let mapleader=","
 
 set expandtab
