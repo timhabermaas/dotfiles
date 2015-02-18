@@ -1,3 +1,5 @@
+execute pathogen#infect()
+
 set nocompatible
 filetype off
 
@@ -57,6 +59,9 @@ map <cr> o<esc>
 
 " Save all open buffers and run rspec on the current file
 map <Leader>r :wa\|!bundle exec rspec % --no-color<cr>
+
+" Save all open buffers and run Nim file
+map <Leader>n :wa\|!nim compile --run %<cr>
 
 " Leave insert mode by pressing jk; this might be stupid idea
 inoremap jk <esc>
