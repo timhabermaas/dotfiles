@@ -5,6 +5,10 @@ filetype off
 
 runtime macros/matchit.vim
 
+" not sure why this is necessary...
+" http://www.reddit.com/r/neovim/comments/2z538d/backspace_only_works_if_my_nvimrc_is_completely/
+set backspace=indent,eol,start
+
 set shell=/bin/bash
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
@@ -63,6 +67,9 @@ map <cr> o<esc>
 
 " Save all open buffers and run rspec on the current file
 map <Leader>r :wa\|!bundle exec rspec % --no-color<cr>
+
+" Save all open buffers and run minitest on the current file
+map <Leader>m :wa\|!bundle exec ruby -I test %<cr>
 
 " Save all open buffers and run Nim file
 map <Leader>n :wa\|!nim compile --run %<cr>
