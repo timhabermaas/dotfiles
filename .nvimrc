@@ -95,6 +95,12 @@ map <leader>v *NNwwy$nviwpNdd:nohl<cr>
 " Replace double quotes with single quotes within the current selection
 map <leader>' :s/"/'/g<cr>
 
+" Replace single quotes with double quotes within the current selection
+map <leader>" :s/'/"/g<cr>
+
+" Compile current file using elm-make
+map <leader>e :!elm-make %<cr>
+
 " Hack to get rid of Mac OS X bug when switching to fullscreen
 map <leader>h :sp<cr>:wincmd k<cr>:q<cr>
 
