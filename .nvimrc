@@ -99,7 +99,7 @@ map <leader>' :s/"/'/g<cr>
 map <leader>" :s/'/"/g<cr>
 
 " Compile current file using elm-make
-map <leader>e :!elm-make %<cr>
+map <leader>e :wa\|!elm-make %<cr>
 
 " Hack to get rid of Mac OS X bug when switching to fullscreen
 map <leader>h :sp<cr>:wincmd k<cr>:q<cr>
