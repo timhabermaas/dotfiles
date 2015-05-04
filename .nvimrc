@@ -107,6 +107,9 @@ map <leader>h :sp<cr>:wincmd k<cr>:q<cr>
 " Search using ag for current search
 map <leader>s :AgFromSearch<cr>
 
+" Remove highlighting
+map <leader>n :nohl<cr>
+
 " this is borrowed from Gary Bernhardt (https://github.com/garybernhardt/dotfiles/blob/f0c0ff92209e5aed4fa3ef6faf056eb9944a8f12/.vimrc)
 function! InsertTabWrapper()
     let col = col('.') - 1
