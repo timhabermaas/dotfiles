@@ -126,6 +126,9 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
 map <leader>t :CtrlP<cr>
 
+map <leader>c :s/^/\/\//<cr>:nohl<cr>
+map <leader>u :s/^\/\//<cr>:nohl<cr>
+
 " split pane management
 nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
