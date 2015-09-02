@@ -1,5 +1,3 @@
-execute pathogen#infect()
-
 set nocompatible
 filetype off
 
@@ -10,10 +8,10 @@ runtime macros/matchit.vim
 set backspace=indent,eol,start
 
 set shell=/bin/bash
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+set runtimepath^=~/.nvim/bundle/ctrlp.vim
 
 " use vundle package manager
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.nvim/bundle/Vundle.vim
 call vundle#rc()
 
 Plugin 'kien/ctrlp.vim'
