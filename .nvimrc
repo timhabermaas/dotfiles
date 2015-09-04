@@ -78,7 +78,7 @@ inoremap jk <esc>
 " Show dotfiles by default.
 let g:ctrlp_show_hidden = 1
 " Ignore some files for CtrlP's index.
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/.stack-work/*
 nnoremap <leader>. :CtrlPTag<cr>
 
 " Remove surrounding parentheses
