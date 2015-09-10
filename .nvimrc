@@ -91,10 +91,10 @@ map <leader>a viwdwvepbbp
 map <leader>v *NNwwy$nviwpNdd:nohl<cr>
 
 " Replace double quotes with single quotes within the current selection
-map <leader>' :s/"/'/g<cr>
+map <leader>' :s/"/'/g<cr>:nohl<cr>
 
 " Replace single quotes with double quotes within the current selection
-map <leader>" :s/'/"/g<cr>
+map <leader>" :s/'/"/g<cr>:nohl<cr>
 
 " Compile current file using elm-make
 map <leader>e :wa\|!elm-make %<cr>
