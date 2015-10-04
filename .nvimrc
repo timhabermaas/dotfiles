@@ -20,6 +20,8 @@ Plugin 'wting/rust.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'chriskempson/base16-vim'
 Plugin 'rking/ag.vim'
+Plugin 'Shougo/vimproc.vim' " requires `make` after installing
+Plugin 'eagletmt/ghcmod-vim'
 
 
 filetype plugin indent on
