@@ -17,11 +17,12 @@ call vundle#rc()
 Plugin 'kien/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'wting/rust.vim'
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'chriskempson/base16-vim'
 Plugin 'rking/ag.vim'
 Plugin 'Shougo/vimproc.vim' " requires `make` after installing
 Plugin 'eagletmt/ghcmod-vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'lambdatoast/elm.vim'
 
 
 filetype plugin indent on
