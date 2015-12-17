@@ -23,6 +23,7 @@ Plugin 'Shougo/vimproc.vim' " requires `make` after installing
 Plugin 'eagletmt/ghcmod-vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'lambdatoast/elm.vim'
+Plugin 'elixir-lang/vim-elixir'
 
 
 filetype plugin indent on
@@ -81,7 +82,7 @@ inoremap jk <esc>
 " Show dotfiles by default.
 let g:ctrlp_show_hidden = 1
 " Ignore some files for CtrlP's index.
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/.stack-work/*
+set wildignore+=*/node_modules/*,*/tmp/*,*.so,*.swp,*.zip,*/.stack-work/*
 nnoremap <leader>. :CtrlPTag<cr>
 
 " Remove surrounding parentheses
