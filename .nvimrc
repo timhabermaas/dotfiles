@@ -8,23 +8,22 @@ runtime macros/matchit.vim
 set backspace=indent,eol,start
 
 set shell=/bin/bash
+
 set runtimepath^=~/.nvim/bundle/ctrlp.vim
 
-" use vundle package manager
-set rtp+=~/.nvim/bundle/Vundle.vim
-call vundle#rc()
+call plug#begin()
+Plug 'kien/ctrlp.vim'
+Plug 'benekastah/neomake'
+Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/vimproc' " requires make
+Plug 'eagletmt/ghcmod-vim'
+Plug 'eagletmt/neco-ghc'
+call plug#end()
 
-Plugin 'kien/ctrlp.vim'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'wting/rust.vim'
-Plugin 'chriskempson/base16-vim'
-Plugin 'rking/ag.vim'
-Plugin 'Shougo/vimproc.vim' " requires `make` after installing
-Plugin 'eagletmt/ghcmod-vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'lambdatoast/elm.vim'
-Plugin 'elixir-lang/vim-elixir'
+let g:haskellmode_completion_ghc = 0
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
+let g:deoplete#enable_at_startup = 1
 
 filetype plugin indent on
 syntax on
@@ -62,6 +61,8 @@ filetype indent on
 " Remove trailing whitespaces on save
 autocmd BufWritePre * :%s/\s\+$//e
 
+autocmd! BufWritePost * Neomake
+
 autocmd FileType rust setlocal shiftwidth=4 softtabstop=2
 
 " Map enter to insert row without entering insert mode
@@ -73,16 +74,16 @@ map <Leader>r :wa\|!bundle exec rspec % --no-color<cr>
 " Save all open buffers and run minitest on the current file
 map <Leader>m :wa\|!bundle exec ruby -I test %<cr>
 
-" Save all open buffers and run Nim file
-map <Leader>n :wa\|!nim compile --run %<cr>
-
 " Leave insert mode by pressing jk; this might be stupid idea
 inoremap jk <esc>
+
+" Manual autocompletion
+" inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : deoplete#mappings#manual_complete()
 
 " Show dotfiles by default.
 let g:ctrlp_show_hidden = 1
 " Ignore some files for CtrlP's index.
-set wildignore+=*/node_modules/*,*/tmp/*,*.so,*.swp,*.zip,*/.stack-work/*
+set wildignore+=*.beam,*/deps/*,*/node_modules/*,*/tmp/*,*.so,*.swp,*.zip,*/.stack-work/*
 nnoremap <leader>. :CtrlPTag<cr>
 
 " Remove surrounding parentheses
