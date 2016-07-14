@@ -18,9 +18,15 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'Shougo/vimproc' " requires make
 Plug 'eagletmt/ghcmod-vim'
 Plug 'eagletmt/neco-ghc'
+Plug 'rking/ag.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'altercation/vim-colors-solarized'
+Plug 'slim-template/vim-slim'
 call plug#end()
 
+" Disable haskell-vim omnifunc
 let g:haskellmode_completion_ghc = 0
+let g:necoghc_enable_detailed_browse = 1
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
 let g:deoplete#enable_at_startup = 1
@@ -28,7 +34,8 @@ let g:deoplete#enable_at_startup = 1
 filetype plugin indent on
 syntax on
 
-colorscheme Tomorrow-Night-Eighties
+set background=dark
+colorscheme solarized
 
 set relativenumber
 set number
