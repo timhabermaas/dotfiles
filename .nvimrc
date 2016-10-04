@@ -15,19 +15,22 @@ call plug#begin()
 Plug 'kien/ctrlp.vim'
 Plug 'benekastah/neomake'
 Plug 'Shougo/deoplete.nvim'
-Plug 'Shougo/vimproc' " requires make
+Plug 'Shougo/vimproc', {'do' : 'make'}
 Plug 'eagletmt/ghcmod-vim'
 Plug 'eagletmt/neco-ghc'
 Plug 'rking/ag.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
 Plug 'slim-template/vim-slim'
+Plug 'rust-lang/rust.vim'
 call plug#end()
 
 " Disable haskell-vim omnifunc
 let g:haskellmode_completion_ghc = 0
 let g:necoghc_enable_detailed_browse = 1
-autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc shiftwidth=4 softtabstop=4
+
+autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
 
 let g:deoplete#enable_at_startup = 1
 
@@ -138,6 +141,12 @@ map <leader>t :CtrlP<cr>
 
 map <leader>c :s/^/\/\//<cr>:nohl<cr>
 map <leader>u :s/^\/\//<cr>:nohl<cr>
+
+map <silent> ]t :GhcModType<cr>
+map <silent> ]c :GhcModTypeClear<cr>
+map <silent> ]l :GhcModLint<cr>
+map <silent> ]s :GhcModSplitFunCase<cr>
+map <silent> ]g :GhcModSigCodegen<cr>
 
 " split pane management
 nmap <silent> <c-k> :wincmd k<CR>
