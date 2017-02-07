@@ -34,6 +34,8 @@ autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
 
 let g:deoplete#enable_at_startup = 1
 
+let g:ctrlp_working_path_mode = 0
+
 filetype plugin indent on
 syntax on
 
