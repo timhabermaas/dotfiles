@@ -30,6 +30,8 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 inoremap jk <esc>
 
+" Ignore some files (e.g. .gitignore stuff) by using `rg` as :Files source.
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
 nmap <leader>t fzfurun()
 nnoremap <silent> <leader>t :Files<CR>
 nnoremap <silent> <leader>b :Buffers<CR>
@@ -203,3 +205,4 @@ nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 
 nmap <silent> <space>d O#[derive(Debug)]<esc>
+nmap <silent> <space>i :CocCommand rust-analyzer.toggleInlayHints<CR>

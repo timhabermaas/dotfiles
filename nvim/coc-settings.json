@@ -7,7 +7,7 @@
       "filetypes": ["haskell", "lhaskell"]
     }
   },
-  "coc.preferences.formatOnSaveFiletypes": ["typescript", "typescriptreact", "javascript", "rust"],
+  "coc.preferences.formatOnSaveFiletypes": ["typescript", "typescriptreact", "javascript", "rust", "css"],
   "rust-analyzer.inlayHints.enable": true,
   "rust-analyzer.diagnostics.enable": true,
   "rust-analyzer.inlayHints.chainingHints": true,
