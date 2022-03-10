@@ -33,7 +33,7 @@ inoremap jk <esc>
 " Ignore some files (e.g. .gitignore stuff) by using `rg` as :Files source.
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
 nmap <leader>t fzfurun()
-nnoremap <silent> <leader>t :GFiles<CR>
+nnoremap <silent> <leader>t :Files<CR>
 nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <leader>r :Rg<CR>
 nnoremap <silent> <space>n :NERDTree<CR>
