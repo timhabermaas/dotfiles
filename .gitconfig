@@ -2,7 +2,7 @@
 [color]
 	ui = auto
 [include]
-        path = .gituserconfig
+	path = .gituserconfig
 [alias]
 	ci = commit
 	co = checkout
@@ -18,3 +18,7 @@
 	editor = nvim
 [push]
 	default = simple
+[commit]
+	verbose = true
+[init]
+	defaultBranch = main
