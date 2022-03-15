@@ -7,3 +7,6 @@ alias pu="git push"
 alias n="nvim ."
 
 alias lzd="lazydocker"
+
+# Rerun a command you've recently executed
+alias rr="eval (history | fzf)"
