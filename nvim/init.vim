@@ -6,9 +6,11 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'overcache/NeoSolarized'
+Plug 'Mofiqul/dracula.nvim'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'preservim/nerdtree'
+Plug 'easymotion/vim-easymotion'
 "Plug 'mhinz/vim-startify'
 
 call plug#end()
@@ -18,7 +20,8 @@ set termguicolors
 set number relativenumber
 set tabstop=2 shiftwidth=2 expandtab
 
-colorscheme NeoSolarized
+colorscheme dracula-soft
+" colorscheme NeoSolarized
 " set background=dark
 
 " colorscheme palenight
