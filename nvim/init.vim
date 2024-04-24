@@ -11,6 +11,7 @@ Plug 'drewtempelmeyer/palenight.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'preservim/nerdtree'
 Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-surround'
 "Plug 'mhinz/vim-startify'
 
 call plug#end()
