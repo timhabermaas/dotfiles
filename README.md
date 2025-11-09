@@ -8,3 +8,4 @@
   2. `chsh -s /opt/homebrew/bin/fish`
 5. Install `mise` through homebrew
 6. Run `link.sh` to create symlinks from the different files in ~/.config to this repository
+7. Create `.config/git/user-config` with `user.email` and `user.name` configuration
