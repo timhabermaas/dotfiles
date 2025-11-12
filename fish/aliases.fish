@@ -13,3 +13,5 @@ alias lzd="lazydocker"
 
 # Rerun a command you've recently executed
 alias rr="eval (history | fzf)"
+# The grep ignores the current branch (marked with *)
+alias gc="git branch --sort=-committerdate | grep -v '^\*' | fzf | xargs git checkout"
