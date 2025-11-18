@@ -2,6 +2,8 @@ theme = "catppuccin_macchiato"
 
 [editor]
 line-number = "relative"
+trim-trailing-whitespace = true
+trim-final-newlines = true
 
 [editor.file-picker]
 hidden = false
