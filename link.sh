@@ -18,3 +18,4 @@ ln -sf $PWD/fish/mise.fish $HOME/.config/fish/conf.d/mise.fish
 ln -sf $PWD/mise/config.toml.tmpl $HOME/.config/mise/config.toml
 ln -sf $PWD/git/gitconfig $HOME/.config/git/config
 ln -sf $PWD/helix/config.toml $HOME/.config/helix/config.toml
+ln -sf $PWD/helix/scripts $HOME/.config/helix/scripts
