@@ -16,6 +16,8 @@
 [core]
 	excludesfile = ~/.gitignore
 	editor = hx
+[merge]
+	conflictStyle = zdiff3
 [push]
 	default = simple
 [commit]

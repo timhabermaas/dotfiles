@@ -3,7 +3,7 @@
 set -e
 
 GIT_REMOTE="$(git remote get-url origin)"
-GIT_REPO_LINK="https://$(echo $GIT_REMOTE | sed 's/^git@//' | sed 's/:/\//' | sed 's/.git$//')"
+GIT_REPO_LINK="https://$(echo $GIT_REMOTE | sed 's/^git@//' | sed 's/^bbraun@//' | sed 's/:/\//' | sed 's/.git$//')"
 GIT_COMMIT_SHA=$(git rev-parse HEAD)
 GITHUB_LINK="$GIT_REPO_LINK/blob/$GIT_COMMIT_SHA/$1#L$2-L$3"
 

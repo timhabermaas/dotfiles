@@ -16,3 +16,4 @@ j = { k = "normal_mode" }
 
 [keys.normal]
 C-g = ":echo %sh{~/.config/helix/scripts/git-copy-permalink.sh %{buffer_name} %{selection_line_start} %{selection_line_end}}"
+g = { q = ":reflow" }
