@@ -3,7 +3,24 @@
 set -e
 
 GIT_REMOTE="$(git remote get-url origin)"
-GIT_REPO_LINK="https://$(echo $GIT_REMOTE | sed 's/^git@//' | sed 's/^bbraun@//' | sed 's/:/\//' | sed 's/.git$//')"
+
+# Normalize the remote URL to a https:// web link.
+# Supported forms:
+#   git@host:owner/repo.git
+#   ssh://git@host/owner/repo.git
+#   https://host/owner/repo.git
+#   https://user@host/owner/repo.git
+GIT_REPO_PATH="$GIT_REMOTE"
+# Strip scheme (https://, http://, ssh://, git://)
+GIT_REPO_PATH="$(printf '%s' "$GIT_REPO_PATH" | sed -E 's#^[a-zA-Z][a-zA-Z0-9+.-]*://##')"
+# Strip user@ prefix (git@, bbraun@, oauth tokens, ...)
+GIT_REPO_PATH="$(printf '%s' "$GIT_REPO_PATH" | sed -E 's#^[^/@]*@##')"
+# Turn scp-style host:path separator into a slash
+GIT_REPO_PATH="$(printf '%s' "$GIT_REPO_PATH" | sed -E 's#^([^/:]+):#\1/#')"
+# Strip trailing .git and slashes
+GIT_REPO_PATH="$(printf '%s' "$GIT_REPO_PATH" | sed -E 's#/+$##; s#\.git$##')"
+
+GIT_REPO_LINK="https://$GIT_REPO_PATH"
 GIT_COMMIT_SHA=$(git rev-parse HEAD)
 GITHUB_LINK="$GIT_REPO_LINK/blob/$GIT_COMMIT_SHA/$1#L$2-L$3"
 
