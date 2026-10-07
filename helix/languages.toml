@@ -1,0 +1,11 @@
+[language-server.typescript-native]
+command = "tsc"
+args = ["--lsp", "--stdio"]
+
+[[language]]
+name = "typescript"
+language-servers = ["typescript-native"]
+
+[[language]]
+name = "tsx"
+language-servers = ["typescript-native"]
