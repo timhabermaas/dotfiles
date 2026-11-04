@@ -22,4 +22,4 @@ ln -sf $PWD/mise/config.toml.tmpl $HOME/.config/mise/config.toml
 ln -sf $PWD/git/gitconfig $HOME/.config/git/config
 ln -sf $PWD/helix/config.toml $HOME/.config/helix/config.toml
 ln -sf $PWD/helix/languages.toml $HOME/.config/helix/languages.toml
-ln -sf $PWD/helix/scripts $HOME/.config/helix/scripts
+ln -sfn $PWD/helix/scripts $HOME/.config/helix/scripts
