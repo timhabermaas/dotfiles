@@ -10,3 +10,9 @@
 6. Run `link.sh` to create symlinks from the different files in ~/.config to this repository
 7. Run `nix profile add ~/.config/nix-tools` to load global nix tools
 8. Create `.config/git/user-config` with `user.email` and `user.name` configuration
+
+# Upgrade nix tools
+
+```sh
+cd nix-tools; nix flake update; nix profile upgrade --all
+```
