@@ -23,3 +23,7 @@ ln -sf $PWD/git/gitconfig $HOME/.config/git/config
 ln -sf $PWD/helix/config.toml $HOME/.config/helix/config.toml
 ln -sf $PWD/helix/languages.toml $HOME/.config/helix/languages.toml
 ln -sfn $PWD/helix/scripts $HOME/.config/helix/scripts
+
+# nix requires symlinking the entire directory. Only symlinking flake.nix leads
+# to weird path issues.
+ln -sfn $PWD/nix-tools $HOME/.config/nix-tools
