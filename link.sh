@@ -14,7 +14,6 @@ ln -sf $PWD/fish/vi-bindings.fish $HOME/.config/fish/conf.d/vi-bindings.fish
 ln -sf $PWD/fish/environment.fish $HOME/.config/fish/conf.d/environment.fish
 ln -sf $PWD/fish/mise.fish $HOME/.config/fish/conf.d/mise.fish
 ln -sf $PWD/fish/zoxide.fish $HOME/.config/fish/conf.d/zoxide.fish
-ln -sf $PWD/fish/direnv.fish $HOME/.config/fish/conf.d/direnv.fish
 ln -sf $PWD/fish/config.fish $HOME/.config/fish/config.fish
 
 # file called config.toml.tmpl because otherwise mise wants to use it as a
