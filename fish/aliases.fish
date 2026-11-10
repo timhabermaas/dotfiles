@@ -11,7 +11,7 @@ alias n="nvim ."
 # Rerun a command you've recently executed
 alias rr="eval (history | fzf)"
 # The grep ignores the current branch (marked with *)
-alias gc="git branch --sort=-committerdate | grep -v '^\*' | fzf | xargs git checkout"
+alias gc='git branch --sort=-committerdate --format="%(refname:short)" | grep -vxF -- "$(git branch --show-current)" | fzf | xargs git checkout'
 
 alias gpl="git pull"
 alias gph="git push"
