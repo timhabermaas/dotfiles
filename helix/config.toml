@@ -5,6 +5,10 @@ line-number = "relative"
 trim-trailing-whitespace = true
 trim-final-newlines = true
 soft-wrap.enable = true
+rainbow-brackets = true
+
+[editor.lsp]
+auto-document-highlight = true
 
 [editor.file-picker]
 hidden = false
