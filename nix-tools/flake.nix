@@ -13,6 +13,7 @@
         name = "global-tools";
         paths = with pkgs; [
           pi-coding-agent
+          jujutsu
           devenv direnv
           helix.packages.aarch64-darwin.default
         ];
