@@ -14,6 +14,7 @@
         paths = with pkgs; [
           pi-coding-agent
           jujutsu
+          llama-cpp
           devenv direnv
           helix.packages.aarch64-darwin.default
         ];
