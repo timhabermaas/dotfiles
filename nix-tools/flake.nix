@@ -16,6 +16,7 @@
           jujutsu
           llama-cpp
           devenv direnv
+          jjui
           helix.packages.aarch64-darwin.default
         ];
       };
