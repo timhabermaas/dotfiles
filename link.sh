@@ -7,6 +7,7 @@ mkdir -p $HOME/.config/fish/conf.d
 mkdir -p $HOME/.config/mise
 mkdir -p $HOME/.config/git
 mkdir -p $HOME/.config/helix
+mkdir -p $HOME/.config/jj/conf.d
 
 ln -sf $PWD/ghostty/config $HOME/.config/ghostty/config
 ln -sf $PWD/fish/aliases.fish $HOME/.config/fish/conf.d/aliases.fish
@@ -23,6 +24,7 @@ ln -sf $PWD/git/gitconfig $HOME/.config/git/config
 ln -sf $PWD/helix/config.toml $HOME/.config/helix/config.toml
 ln -sf $PWD/helix/languages.toml $HOME/.config/helix/languages.toml
 ln -sfn $PWD/helix/scripts $HOME/.config/helix/scripts
+ln -sf $PWD/jj/aliases.toml $HOME/.config/jj/conf.d/aliases.toml
 
 # nix requires symlinking the entire directory. Only symlinking flake.nix leads
 # to weird path issues.
