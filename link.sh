@@ -25,6 +25,7 @@ ln -sf $PWD/helix/config.toml $HOME/.config/helix/config.toml
 ln -sf $PWD/helix/languages.toml $HOME/.config/helix/languages.toml
 ln -sfn $PWD/helix/scripts $HOME/.config/helix/scripts
 ln -sf $PWD/jj/aliases.toml $HOME/.config/jj/conf.d/aliases.toml
+ln -sf $PWD/jj/templates.toml $HOME/.config/jj/conf.d/templates.toml
 
 # nix requires symlinking the entire directory. Only symlinking flake.nix leads
 # to weird path issues.
